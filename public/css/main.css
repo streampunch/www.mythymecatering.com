@@ -1,0 +1,2148 @@
+/* Global Defaults
+=====================================================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ul, ol { margin-left: 2em; }
+ol { list-style-type: decimal; }
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+b, strong, th { font-weight: bold; }
+em, i { font-style: italic; }
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+a, a:active, a:visited { color: #8ca833; outline:0; }
+a:hover { color: #617b12; }
+
+/* Global Elements
+=====================================================================*/
+html {
+	background:url(../images/background.png);
+}
+body {
+	font:12px arial, verdana, serif;
+	background:url(../images/back-pattern.png) repeat-x 0 686px;
+	min-width: 1150px
+}
+.replace{
+	position:relative;
+	margin:0;
+	padding:0;
+	/* \*/
+	overflow:hidden;
+	/* */
+}
+.replace span{
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+.skiplink{
+	display:none;
+}
+.clear {
+	clear: both;
+}
+/* Start CSS Coding
+=====================================================================*/
+#slideshow {
+	min-width: 1150px;
+	height:686px;
+	background:#b6d163;
+	position:relative;
+	z-index:1;
+}
+.panel-slide {
+	width:100%;
+	height:686px;
+}
+#slide-1 {
+	background:url(../images/slide-1.jpg) no-repeat 50% 0;
+}
+#slide-2 {
+	background:url(../images/slide-2.jpg) no-repeat 50% 0;
+}
+#slide-3 {
+	background:url(../images/slide-3.jpg) no-repeat 50% 0;
+}
+#shadow {
+	height:4px;
+	background:url(../images/shadow.png) repeat-x;
+	position:relative;
+	z-index:5;
+	margin:-4px 0 0 0;
+}
+#container {
+	min-width: 1150px;
+	background:url(../images/back-nav.png) repeat-x 0 29px;
+	position:relative;
+	z-index:10;
+	margin:-686px 0 0 0;
+}
+#banner {
+	width:1090px;
+	height:89px;
+	margin:0 auto 22px auto;
+	position:relative;
+	padding: 0 15px;
+}
+#logo {
+	width:220px;
+	height:155px;
+	position:absolute;
+	z-index:100;
+	left:34px;
+	top:50px;
+}
+#logo img {
+
+}
+#nav {
+	height:61px;
+	float:right;
+	margin:28px 0 0 0;
+}
+#nav-main {
+	height:61px;
+}
+#nav-main li {
+	height:61px;
+	float:left;
+	display:inline;
+	margin:0 0 0 3px;
+	position: relative;
+}
+#nav-main li a {
+	height:41px;
+	float:left;
+	display:inline;
+	font-family:'Droid Sans', arial, serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#313131;
+	text-shadow:0 1px #fff;
+	text-transform:uppercase;
+	text-decoration:none;
+	padding:20px 12px 0 12px;
+}
+#nav-main li:hover a, #nav-main li.current-menu-item a {
+	background:url(../images/nav-hover.png) no-repeat 50% 0;
+	color:#000;
+	-webkit-transition: all 0.8s ease-in-out 0.1s; 
+	-moz-transition: all 0.8s ease-in-out 0.1s;
+}
+/* Start CSS POPUP Menu
+=====================================================================*/
+#nav ul ul {
+	position:absolute;
+	z-index:100000;
+	display:none;
+	width:188px;
+	margin: 0;
+	top: 61px;
+	left:0;
+	background:url(../images/dropdown-1.png) no-repeat;
+	padding:11px 0 8px 0;
+	float: none;
+	text-align: left;
+	border-bottom:1px solid rgba(0,0,0,0.2);
+}
+#nav ul#nav-main li:hover ul li {
+	display: inline;
+	float: left;
+	width:178px;
+	padding:0 5px;
+	height:auto;
+	position:relative;
+	margin: 0;
+	background:url(../images/sep-dropdown.png) 50% 100% no-repeat;
+}
+#nav ul ul ul {
+	position:absolute;
+	z-index:1300;
+	display:none;
+	width:188px;
+	margin: 0;
+	top: -2px;
+	left:188px;
+	padding:0 0 8px 9px;
+	background:url(../images/dropdown-2.png) no-repeat;
+	border:none;
+}
+#nav ul li ul li ul li {
+	display: inline;
+	float: left;
+	padding: 0;
+	margin:0;
+	height:auto;
+}
+#nav #nav-main li:hover ul li {
+	background:none
+}
+#nav #nav-main li:hover ul li a, #nav #nav-main li:hover ul li a:link, #nav #nav-main li:hover ul li a:visited {
+	font-size:14px;
+	width:152px;
+	height:auto;
+	text-transform:none;
+	border:none;
+	background:none;
+	padding:8px 13px 8px 13px;
+	text-shadow:none;
+	margin:0;
+	font-weight:lighter;
+	line-height: 1.6em;
+	color:#2c2c2c;
+}
+#nav #nav-main li:hover ul li a:hover, #nav #nav-main li ul li a:hover {
+	background: #fff;
+	text-decoration: none;
+	color:#000;
+	-webkit-transition: all 0.4s ease-in-out 0.1s; 
+	-moz-transition: all 0.4s ease-in-out 0.1s;
+}
+nav#nav li:hover ul ul,
+nav#nav li li:hover ul ul
+{display:none;}
+
+nav#nav li:hover ul,
+nav#nav li li:hover ul
+{display:block;}
+/* End CSS Drop Down Menu */
+
+#content-homepage {
+	width:1090px;
+	height:575px;
+	margin:0 auto;
+	overflow:hidden;
+	padding: 0 15px;
+}
+#restaurant-info {
+	float:left;
+	margin:206px 0 0 0;
+}
+#restaurant-info h1 {
+	height:27px;
+	background:#a4c14a;
+	font-family:'Droid Sans', arial, serif;
+	color:#000;
+	font-size:20px;
+	font-weight:bold;
+	padding:12px 16px 0 16px;
+	float:left;
+	position:relative;
+	z-index:20;
+}
+#restaurant-info #phone {
+	height:28px;
+	float:left;
+	clear:both;
+	background:url(../images/label-1.png) no-repeat;
+	padding:15px 16px 0 16px;
+	font-family:'Droid Serif', arial, serif;
+	font-size:12px;
+	color:#404040;
+	margin:-15px 0 0 6px;
+	position:relative;
+	z-index:30;
+}
+#restaurant-info #info-opening {
+	height:26px;
+	float:left;
+	clear:both;
+	background:url(../images/label-2.png) no-repeat;
+	padding:14px 16px 0 16px;
+	font-family:'Droid Serif', arial, serif;
+	font-size:12px;
+	color:#404040;
+	margin:-13px 0 0 1px;
+	position:relative;
+	z-index:40;
+}
+#panel-front {
+	width:230px;
+	height:473px;
+	background:url(../images/panel-front.png) no-repeat;
+	float:right;
+	margin:16px 13px 0 0;
+	padding:23px 25px;
+}
+#panel-front .static-page p {
+	font-size:14px;
+	color:#272727;
+	line-height:1.6em;
+	margin-top:1.6em;
+	margin-bottom:1.6em;
+	text-shadow:0 1px #fff;
+}
+#panel-front .static-page h3 {
+	font-size:18px;
+	line-height:1.222em;
+	margin-top:1.833em;
+	margin-bottom:0.611em;
+	font-weight:normal;
+	color:#191919;
+	font-family:'Droid Serif', sans-serif;
+}
+#panel-front .static-page h3#title-homepage {
+	margin-top:0;
+	margin-bottom:25px;
+	text-shadow:0 1px #fff;
+}
+.imgframe {
+	padding:8px;
+	background:#fff;
+	box-shadow:0 0 3px #d7d7d7;
+}
+#panel-front .button-more {
+	width:131px;
+	height:28px;
+	display:block;
+	background:url(../images/button-more-homepage.png) no-repeat;
+	text-align:center;
+	float:right;
+	font-size:12px;
+	color:#353535;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-weight:bold;
+	font-family:'Droid Sans', arial, serif;
+	text-shadow:0 1px #fff;
+	padding:12px 0 0 0;
+}
+#panel-front .button-more:hover {
+	background-position:0 -40px;
+	color:#fff;
+	text-shadow:0 1px 1px #87a038;
+}
+/* About
+=====================================================================*/
+#content {
+	width:1120px;
+	margin:0 auto;
+	overflow:hidden;
+	padding: 0 15px;
+}
+#content-top {
+	width: 1120px;
+	height: 30px;
+	background: url(../images/content-top.png) no-repeat;
+	font-size: 0;
+}
+#content-back {
+	width: 1120px;
+	background: url(../images/back-content.png) repeat-y;
+}
+#content-bottom {
+	width: 1120px;
+	height: 19px;
+	background: url(../images/content-bottom.png) no-repeat;
+	font-size: 0;
+}
+#main-content {
+	width: 700px;
+	float: left;
+	display: inline;
+	margin: 0 0 0 55px;
+	padding: 13px 0 0 0;
+}
+#main-content .static-page h1, h1 {
+	font-size:24px;
+	color:#191919;
+	line-height:0.75em;
+	margin-top:1.125em;
+	margin-bottom:0.375em;
+	font-family: 'Droid Serif', Georgia, serif;
+	font-weight: normal;
+}
+#main-content .static-page h1#main-title, h1#main-title {
+	background: url(../images/sep-main-title.png) no-repeat 0 100%;
+	padding: 0 0 18px 0;
+	margin-bottom:25px;
+}
+h1#main-title.blog {
+	margin-bottom: 0;
+}
+#main-content .static-page p {
+	font-size:14px;
+	color:#272727;
+	line-height:1.6em;
+	margin-top:1.6em;
+	margin-bottom:1.6em;
+}
+#main-content .imgframe {
+	padding:10px;
+}
+#main-content .static-page h2 {
+	font-size:20px;
+	line-height:1.1em;
+	margin-top:1.65em;
+	margin-bottom:1.1em;
+	font-weight:normal;
+	color:#191919;
+	font-family: 'Droid Serif', Georgia, serif;
+}
+#main-content .static-page h3 {
+	font-size:18px;
+	line-height:1.222em;
+	margin-top:1.833em;
+	margin-bottom:0.611em;
+	font-weight:normal;
+	color:#191919;
+	font-family: 'Droid Serif', Georgia, serif;
+}
+#main-content .static-page h4 {
+	font-size:16px;
+	line-height:1.375em;
+	margin-top:2.062em;
+	margin-bottom:0.687em;
+	font-weight:normal;
+	color:#191919;
+	font-family: 'Droid Serif', Georgia, serif;
+}
+#main-content .static-page h5, #main-content .static-page h6 {
+	font-size:14px;
+	line-height:1.571em;
+	margin-top:2.356em;
+	margin-bottom:0.785em;
+	font-weight:bold;
+	color:#191919;
+	font-family: 'Droid Serif', Georgia, serif;
+}
+#main-content .static-page h6 {
+	font-weight:normal;
+}
+#main-content .static-page ul {
+	font-size:14px;
+	line-height:1.6em;
+	margin-top:1.6em;
+	margin-bottom:1.6em;
+}
+.alignright {
+	float:right;
+	margin-left:30px;
+}
+.alignleft {
+	float:left;
+	margin-right:30px;
+}
+.separator {
+	background:url(../images/separator.png) repeat-x 0 3px;
+	height:6px;
+	font-size:11px;
+	margin-top:1.6em;
+	margin-bottom:1.6em;
+	line-height:1.6em;
+	position:relative;
+}
+.separator a {
+	float:right;
+	background:url(../images/label-sep.png) no-repeat;
+	padding:7px 10px 0 20px;
+	height:16px;
+	text-transform:uppercase;
+	color:#fff;
+	text-decoration:none;
+	font-family:'Droid Sans', serif;
+	font-size:9px;
+	font-weight:bold;
+	text-shadow:0 -1px #8eaa35;
+	margin:-8px 0 0 0;
+	line-height: 1.0em;
+}
+.panel-static {
+	width:780px;
+	height:226px;
+	background:url(../images/panel-static.jpg) no-repeat;
+	margin:37px 0 0 -40px;
+	padding: 25px 0 0 0;
+}
+.panel-static #title-panel {
+	text-align: center;
+	font-size: 18px;
+	color: #341d0a;
+	font-family: 'Droid Serif', Georgia, serif;
+	margin: 0 0 20px 0;
+}
+#list-panel-food {
+	margin: 0 0 0 40px;
+	list-style: none;
+}
+#list-panel-food li {
+	width: 148px;
+	height: 175px;
+	float: left;
+	position: relative;
+	margin: 0 36px 0 0;
+}
+#list-panel-food li img {
+	padding: 5px;
+	background: #fff;
+	box-shadow:0 1px 2px #b5a688;
+	margin: 0 0 7px 0;
+}
+#list-panel-food li h4 {
+	text-align: center;
+	font-size: 12px;
+	color: #51331a;
+	font-family: 'Droid Sans', serif;
+	line-height: 1.5em;
+}
+#list-panel-food li .panel-price {
+	width: 149px;
+	height: 30px;
+	position: absolute;
+	z-index: 40;
+	background: #a4c14a;
+	left: -1px;
+	bottom: 62px;
+	display: none;
+}
+#list-panel-food li .panel-price span {
+	font-size: 12px;
+	font-family: 'Droid Serif', Georgia, serif;
+	float: left;
+	color: #fff;
+	margin: 8px 0 0 7px;
+	display: inline;
+}
+.button-zoom {
+	width: 22px;
+	height: 22px;
+	float: right;
+	background: url(../images/button-zoom.png) no-repeat;
+	text-indent: -9999px;
+	margin: 5px 4px 0 0;
+}
+.button-zoom:hover {
+	background-position: 0 -22px;
+}
+
+#sidebar {
+	width: 284px;
+	float: right;
+	margin: 0 15px 0 0;
+	display: inline;
+	padding: 15px 0 0 26px;
+}
+#sidebar .widget-container {
+	width: 258px;
+	background: url(../images/widget-bottom.png) no-repeat 0 100%;
+	padding: 0 0 10px 0;
+	margin: 0 0 30px 0;
+}
+#sidebar .widget-wrapper {
+	width: 208px;
+	background: url(../images/widget-top.png) no-repeat;
+	padding: 22px 25px 17px 25px;
+}
+#sidebar .widget-title {
+	font-size: 16px;
+	color: #341d0a;
+	font-family: 'Droid Serif', Georgia, serif;
+	background: url(../images/sep-title-widget.png) no-repeat 0 100%;
+	width: 208px;
+	margin: 0 0 20px -5px;
+	padding: 0 5px 11px 5px;
+	text-shadow:0 1px #faf7f2;
+}
+#sidebar .imgframe {
+	padding: 6px;
+	box-shadow:0 1px 2px #b5a688;
+}
+#sidebar .text-widget p {
+	font-size:12px;
+	color:#51331a;
+	line-height:1.6em;
+	margin-top:1.6em;
+	margin-bottom:1.6em;
+	text-shadow:0 1px #faf7f2;
+}
+#sidebar .button-more {
+	width:131px;
+	height:28px;
+	display:block;
+	background:url(../images/button-more.png) no-repeat;
+	text-align:center;
+	float:right;
+	font-size:12px;
+	color:#341d0a;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-weight:bold;
+	font-family:'Droid Sans', arial, serif;
+	text-shadow:0 1px #faf7f2;
+	padding:12px 0 0 0;
+	margin: 0 auto;
+}
+#sidebar .button-more:hover {
+	background-position:0 -40px;
+	color:#fff;
+	text-shadow:0 1px 1px #87a038;
+}
+#sidebar .separator {
+	background: url(../images/sep-sidebar.png) repeat-x;
+	margin-bottom:1.1em;
+}
+#sidebar ul.menu, #nav-twitter ul {
+	margin: 0;
+	list-style: none;
+}
+#sidebar ul.menu li, #nav-twitter ul li {
+	background: url(../images/sep-sidebar.png) repeat-x 0 100%;
+	padding: 0 0 13px 0;
+	margin: 0 0 11px 0;
+	text-shadow:0 1px #faf7f2;
+	line-height:1.4em;
+}
+#sidebar ul.menu li a {
+	font-size: 12px;
+	color: #51331a;
+	text-decoration: none;
+}
+#sidebar ul.menu li a:hover {
+	color: #a2856f;
+}
+#sidebar img.testimonial {
+	float: left;
+	background: url(../images/frames-testimonial.png) no-repeat;
+	padding: 7px 8px 18px 8px;
+	margin: 0 0 10px 0;
+}
+#sidebar .text-widget blockquote {
+	clear: both;
+}
+#sidebar .testimonial-header {
+	width: 88px;
+	float: right;
+	background: url(../images/sep-sidebar.png) repeat-x 0 100%;
+	padding: 0 0 10px 0;
+}
+.testimonial-header h4 {
+	font-size: 14px;
+	color: #63381a;
+	font-weight: bold;
+	margin: 6px 0;
+}
+.testimonial-header h5 {
+	font-size: 12px;
+	font-family: 'Droid Serif', Georgia, serif;
+	color: #a68e7c;
+	font-weight: normal;
+	font-style: italic;
+}
+.star {
+	width: 59px;
+	height: 10px;
+	background: url(../images/star.png) no-repeat;
+	text-indent: -9999px;
+	display: block;
+	margin: 7px 0 3px 0;
+}
+.rate45 {
+	background-position: 0 -10px;
+}
+.rate40 {
+	background-position: 0 -20px;
+}
+.rate35 {
+	background-position: 0 -30px;
+}
+.rate30 {
+	background-position: 0 -40px;
+}
+.rate25 {
+	background-position: 0 -50px;
+}
+.rate20 {
+	background-position: 0 -60px;
+}
+.rate15 {
+	background-position: 0 -70px;
+}
+.rate10 {
+	background-position: 0 -80px;
+}
+.rate05 {
+	background-position: 0 -90px;
+}
+.rate00 {
+	background-position: 0 -100px;
+}
+#sidebar .text-widget blockquote {
+	font-size: 14px;
+	line-height:1.6em;
+	margin-top:1.6em;
+	margin-bottom:1.2em;
+}
+#sidebar .text-widget blockquote p {
+	font-size: 14px;
+	line-height:1.6em;
+	margin-top:1.6em;
+	margin-bottom:1.2em;
+	color: #51331a;
+	font-family: 'Droid Sans', serif;
+}
+
+/* News List
+=====================================================================*/
+#main-content .static-page header h2 {
+	margin-bottom:0.55em;
+}
+#main-content .static-page header h2 a {
+	color:#191919;
+	text-decoration:none;
+}
+#main-content .static-page header h2 a:hover {
+	color:#8ca833;
+}
+#main-content .static-page header time {
+	float:left;
+	height:14px;
+	background:url(../images/back-date.png) no-repeat 100% 0;
+	font-family:'Droid Sans', serif;
+	font-size:11px;
+	color:#fff;
+	padding:3px 16px 0 8px;
+	line-height: 1.0em;
+}
+#main-content .static-page header ul.news-info {
+	list-style:none;
+	margin:-1px 0 0 0;
+	float:left;
+	height:17px;
+}
+#main-content .static-page header ul.news-info li {
+	float:left;
+	height:17px;
+	font-size:11px;
+	color:#868686;
+	background:url(../images/sep-newsinfo.png) no-repeat 100% 5px;
+	padding:0 10px 0 8px;
+	font-family:'Droid Sans', serif;
+}
+#main-content .static-page header ul.news-info li.last {
+	background:none;
+}
+#main-content .static-page header ul.news-info li a {
+	color:#656565;
+	text-decoration:none;
+}
+#main-content .static-page header ul.news-info li a:hover {
+	border-bottom:1px dotted #656565;
+}
+#main-content .static-page.news {
+	background:url(../images/separator.png) repeat-x 0 100%;
+	padding:0 0 15px 0;
+}
+.link-more {
+	font-family:'Droid Serif', Georgia, serif;
+	font-style:italic;
+	text-decoration:none;
+}
+#main-content .static-page.news figure {
+	margin-top:25px;
+	float:right;
+}
+#pages-container {
+	background: url(../images/separator.png) repeat-x 0 100%;
+	height: 42px;
+	margin: 0 0 40px 0;
+}
+#main-content #list-pages {
+	height:25px;
+	margin:6px 0 0 0;
+	padding: 0;
+	float: right;
+}
+#main-content #list-pages li {
+	margin:0 2px 0 0;
+	height:25px;
+	float:left;
+	font-size:11px;
+	display:inline;
+	background:none;
+	padding:0;
+	text-transform: uppercase;
+}
+#main-content #list-pages li.unclick {
+	margin:0 2px 0 0;
+	height:18px;
+	border:1px solid #e0e0e0;
+	color:#e0e0e0;
+	padding:5px 8px 0 8px;
+}
+#main-content #list-pages li.dotted {
+	height:20px;
+	font-size:11px;
+	padding:3px 5px 0 5px;
+	color:#b2c0c6;
+}
+#main-content #list-pages li a, #main-content #list-pages li a:link, #main-content #list-pages li a:visited {
+	padding:5px 8px 0 8px;
+	height:18px;
+	display:inline;
+	float:left;
+	border:1px solid #8c8c8c;
+	color:#8c8c8c;
+	text-decoration: none;
+	text-shadow: none;
+}
+#main-content #list-pages li a.active, #main-content #list-pages li a.active:link, #main-content #list-pages li a.active:visited {
+	background:#8c8c8c;
+	border:1px solid #8c8c8c;
+	color:#fff;
+}
+#main-content #list-pages li a:hover {
+	border:1px solid #52656f;
+	color:#52656f;
+	text-decoration:none;
+}
+#sidebar ul.menu {
+	margin: 0;
+	list-style: none;
+}
+#sidebar ul.menu.news li {
+	padding: 0 0 17px 0;
+	margin: 0 0 15px 0;
+}
+#sidebar ul.menu.news li h4 {
+	font-size: 12px;
+	line-height: 1.4em;
+	margin: 0 0 4px 0;
+}
+#sidebar ul.menu.news li .date-news {
+	font-size: 11px;
+	color: #a68e7c;
+	font-family: 'Droid Serif', Georgia, serif;
+	font-style: italic;
+}
+#sidebar ul.menu.news li .alignright {
+	margin-left: 20px;
+}
+#sidebar ul.menu.news li .alignleft {
+	margin-right: 20px;
+}
+.food-sidebar {
+	position: relative;
+}
+.food-sidebar img {
+	padding: 6px;
+	background: #fff;
+	box-shadow:0 1px 2px #b5a688;
+	margin: 0 0 7px 0;
+}
+.food-sidebar .panel-price {
+	width: 196px;
+	height: 30px;
+	position: absolute;
+	z-index: 40;
+	background: #a4c14a;
+	left: 6px;
+	bottom: 16px;
+	display: none;
+}
+.food-sidebar .panel-price span {
+	font-size: 16px;
+	font-family: 'Droid Serif', Georgia, serif;
+	float: left;
+	color: #fff;
+	margin: 6px 0 0 7px;
+	display: inline;
+}
+.title-food-sidebar {
+	text-align: center;
+	font-size: 14px;
+	color: #51331a;
+	text-align: center;
+	font-family: 'Droid Sans', serif;
+}
+.nav-schedule {
+	list-style:none;
+	margin:0;
+}
+.nav-schedule li {
+	height:31px;
+	background:url(../images/back-schedule.png) repeat-x;
+	margin:0 0 9px 0;
+	font-family:'Droid Serif', serif;
+	font-size:12px;
+}
+.nav-schedule li strong {
+	font-weight:normal;
+	float:left;
+	display:inline;
+	color:#51331a;
+	margin:8px 0 0 8px;
+}
+.nav-schedule li span {
+	float:right;
+	color:#77583f;
+	margin:8px 8px 0 0;
+	font-style:italic;
+}
+#nav-twitter {
+	margin:0 0 15px 0;
+}
+#nav-twitter li {
+	color:#51331a;
+}
+#nav-twitter li a {
+	color:#89684d;
+	text-decoration:none;
+}
+#nav-twitter li a:hover {
+	border-bottom:1px dotted #89684d;
+}
+#nav-twitter li .twitterTime {
+	font-size:11px;
+	color:#a68e7c;
+	font-family:'Droid Serif', serif;
+	font-style:italic;
+}
+
+
+/* News Detail
+=====================================================================*/
+#main-content .static-page.news-detail h1#main-title {
+	margin-bottom: 17px;
+}
+#tag-container {
+	clear: both;
+	padding: 7px 0 0 0;
+}
+#main-content .static-page #tag-container p {
+	margin: 0;
+	float: left;
+	font-size: 11px;
+	font-family:'Droid Sans', serif;
+	color: #656565;
+	margin: 0 0 0 7px;
+	display: inline;
+}
+#main-content .static-page #tag-container p a {
+	color: #656565;
+	text-decoration: none;
+}
+#main-content .static-page #tag-container p a:hover {
+	border-bottom: 1px dotted #656565;
+}
+#tag-container strong {
+ 	float: left;
+ 	height:14px;
+ 	background:url(../images/back-date.png) no-repeat 100% 0;
+ 	font-family:'Droid Sans', serif;
+ 	font-size:11px;
+ 	color:#fff;
+ 	padding:3px 16px 0 8px;
+ 	line-height: 1.0em;
+ 	font-weight: normal;
+}
+#main-content .static-page.news-detail header {
+	margin: 0 0 30px 0;
+}
+ul#list-comments {
+	margin: 0;
+	list-style: none;
+}
+ul#list-comments li {
+	padding: 5px 0;
+	background: url(../images/sep-comment.png) repeat-x 0 100%;
+	margin: 0 0 25px 0;
+}
+#list-comments li img {
+	float: left;
+	margin: 0 25px 25px 0;
+}
+#main-content .static-page #list-comments li article {
+	width: 608px;
+	float: left;
+}
+#main-content .static-page #list-comments li article p {
+	color: #636363;
+}
+#main-content .static-page #list-comments li h3 {
+	margin: 0;
+	float: left;
+	font-size: 14px;
+	color: #6c6c6c;
+	font-family: 'Droid Sans', serif;
+	font-weight: normal;
+	padding: 2px 0 0 0;
+}
+#main-content .static-page #list-comments li h3 a {
+	color: #404040;
+	text-decoration: none;
+}
+#main-content .static-page #list-comments li h3 a:hover {
+	border-bottom: 1px dotted #404040;
+}
+#main-content .static-page #list-comments li time {
+	background: none;
+	float: left;
+	background: none;
+	padding: 0 0 0 10px;
+	margin: 5px 0 0 10px;
+	width: auto;
+	height: auto;
+	font-size: 11px;
+	color: #a5a5a5;
+	display: inline;
+	border-left: 1px solid #c9c9c9;
+	font-family: 'Droid Serif', serif;
+	font-style: italic;
+}
+#main-content .static-page #list-comments li header {
+	margin-bottom: -10px;
+}
+#list-comments li .children {
+	clear: both;
+	list-style: none;
+	margin: 0 0 -30px 25px;
+	padding: 25px 0 0 0;
+	background: url(../images/sep-comment.png) repeat-x;
+}
+#main-content .static-page #list-comments li .children article {
+	width: 583px;
+	float: left;
+}
+#form-left {
+	width: 250px;
+	float: left;
+	display: inline;
+}
+#form-comment {
+	padding: 0 0 40px 0;
+}
+#form-comment .input {
+	width: 230px;
+	height: 24px;
+	border: none;
+	background: #f1f1f1;
+	box-shadow: 0 -1px 1px #cacaca;
+	border-radius: 4px;
+	font-size: 12px;
+	color: #a4a4a4;
+	padding: 5px 10px;
+	margin: 8px 0 12px 0;
+}
+#form-comment label {
+	font-size: 12px;
+	color: #272727;
+}
+#form-right {
+	width: 432px;
+	float: right;
+}
+#form-comment .input.textarea {
+	width: 412px;
+	height: 110px;
+}
+#form-comment .button {
+	width:131px;
+	height:40px;
+	display:block;
+	background:url(../images/button-more-homepage.png) no-repeat;
+	text-align:center;
+	float:right;
+	font-size:12px;
+	color:#353535;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-weight:bold;
+	font-family:'Droid Sans', arial, serif;
+	text-shadow:0 1px #fff;
+	padding: 1px 0 0 0;
+	border: none;
+}
+#form-comment .button:hover {
+	background-position:0 -40px;
+	color:#fff;
+	text-shadow:0 1px 1px #87a038;
+}
+/* Foods 1
+=====================================================================*/
+#content.full #content-back {
+	width: 1120px;
+	background: url(../images/back-content-full.png) repeat-y;
+}
+#content.full #content-top {
+	background: url(../images/content-top-full.png) no-repeat;
+}
+#content.full #main-content{
+	width: 1010px;
+	float: none;
+	display: block;
+	margin: 0 0 0 55px;
+	padding: 13px 0 0 0;
+}
+#content.full #main-content h1#main-title {
+	background: url(../images/sep-main-title-full.png) no-repeat 0 100%;
+}
+.list-foods-1, .list-foods-2 {
+	margin: 0;
+	list-style: none;
+}
+.list-foods-1 li {
+	width: 218px;
+	height: 218px;
+	float: left;
+	display: inline;
+	margin: 0 30px 30px 0;
+	border: 1px solid #d9d9d9;
+	box-shadow: 1px 1px 1px #f2f2f2;
+	position: relative;
+	padding:5px;
+}
+.list-foods-1 li.cat {
+	background: url(../images/cat-box.jpg) no-repeat;
+	padding: 25px 30px 0 30px;
+	width: 170px;
+	height: 205px;
+	border: none;
+}
+.list-foods-1 li.cat h3 {
+	font-size: 20px;
+	color: #341d0a;
+	font-weight: normal;
+	font-family: 'Droid Sans', serif;
+	margin: 0 0 15px 0;
+}
+.list-foods-1 li.cat p {
+	font-size: 14px;
+	color: #51331a;
+	line-height: 1.4em;
+}
+.list-foods-1 li:hover {
+	border: 1px solid #a4c14a;
+}
+.list-foods-1 li.cat:hover {
+	border: none;
+}
+.list-foods-1 li h4 {
+	font-size:14px;
+	font-family:'Droid Sans', serif;
+	color:#51331a;
+	font-weight:bold;
+	margin:7px 0 4px 0;
+}
+.list-foods-1 li .price {
+	font-size:14px;
+	color:#718c1e;
+	font-family:'Droid Serif', serif;
+}
+.link-zoom {
+	position:absolute;
+	width:17px;
+	height:48px;
+	z-index:20;
+	background:url(../images/link-zoom.png) no-repeat;
+	left:5px;
+	bottom:5px;
+	text-indent:-9999px;
+	display:none;
+}
+.link-zoom:hover {
+	background-position:0 -48px;
+}
+.foods-1 .tag-foods {
+	height:18px;
+	position:absolute;
+	z-index:50;
+	top:10px;
+	right:10px;
+}
+.list-foods-1 li.foods-1 .tag-foods li {
+	height:14px;
+	width:auto;
+	padding:0;
+	border:none;
+	float:left;
+	display:inline;
+	margin:0 0 0 5px;
+	background:#51331a;
+	font-size:11px;
+	color:#fff;
+	font-weight:bold;
+	text-transform:uppercase;
+	box-shadow:none;
+	line-height:0.9em;
+	padding:4px 5px 0 5px;
+}
+.foods-1 .foods-info {
+	width:218px;
+	height:165px;
+	position:absolute;
+	z-index:30;
+	top:5px;
+	left:5px;
+	background:url(../images/foods-1-hover.png) no-repeat;
+	display:none;
+}
+.list-foods-1 li:hover .foods-info {
+	display:block;
+}
+.foods-1 .foods-info p {
+	margin:33px 12px 0 12px;
+	font-size:12px;
+	font-family:'Droid Serif', serif;
+	color:#1c1c1c;
+	line-height:1.4em;
+}
+.foods-1 .foods-option {
+	width:218px;
+	height:59px;
+	position:absolute;
+	z-index:40;
+	background:url(../images/foods-1-option.png) no-repeat;
+	top:101px;
+	left:0;
+	padding:5px 0 0 0;
+}
+.foods-1 .foods-option h5 {
+	padding:0 12px;
+	margin:3px 0;
+	font-family:'Droid Serif', serif;
+	font-size:11px;
+}
+.foods-1 .foods-option h5 em {
+	float:left;
+	color:#6a4e36;
+}
+.foods-1 .foods-option h5 span {
+	float:right;
+	color:#555;
+	font-style:italic;
+}
+.list-foods-1 li.last {
+	margin-right:0;
+}
+
+/* Foods 2
+=====================================================================*/
+.list-foods-2 {
+	padding: 10px 0 0 0;
+}
+.list-foods-2 li {
+	width: 698px;
+	border: 1px solid #eae1cd;
+	position: relative;
+	background: #fefdfa;
+	padding: 52px 0 16px 0;
+	margin: 0 0 40px 0;
+}
+.foods-2 .title-foods {
+	width: 702px;
+	height: 52px;
+	position: absolute;
+	z-index: 20;
+	top: -2px;
+	left: -2px;
+	background: url(../images/title-foods-2.png) no-repeat;
+}
+.foods-2 h3 {
+	font-size: 16px;
+	color: #51331a;
+	font-family: 'Droid Sans', serif;
+	float: left;
+	margin: 15px 0 0 17px;
+	display: inline;
+}
+.foods-2 .price {
+	float: right;
+	height: 31px;
+	background: url(../images/sep-price.png) repeat-y;
+	margin: 4px 0 0 0;
+	padding: 10px 22px 0 20px;
+	font-size: 18px;
+	color: #5e2b0a;
+	font-family: 'Droid Serif', serif;
+}
+.foods-2 .img-foods {
+	float: left;
+	width: 115px;
+	height: 88px;
+	background: #fff;
+	box-shadow:0 0 3px #b6b6b6;
+	display: inline;
+	margin: 10px 0 0 15px;
+	padding: 6px 0 0 6px;
+	position: relative;
+}
+.foods-2 .img-foods div {
+	width: 109px;
+	height: 82px;
+	position: relative;
+	overflow: hidden;
+}
+.foods-2 .img-foods a span {
+	position: absolute;
+	z-index: 30;
+	width: 109px;
+	height: 82px;
+	top: 0;
+	left: 0;
+	background: url(../images/foods-2-hover.png) no-repeat;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-moz-transition: opacity 0.2s ease-in-out;
+	-o-transition: opacity 0.2s ease-in-out;
+	-ms-transition: opacity 0.2s ease-in-out;	
+}
+.foods-2 .img-foods a:hover span {
+	opacity: 1;
+}
+.foods-2 .img-foods img {
+	transition: all 0.4s linear;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	-ms-transition: all 0.4s linear;
+}
+.foods-2 .img-foods a:hover img {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+}
+.foods-2 .foods-info {
+	width: 300px;
+	float: left;
+	margin: 10px 0 0 17px;
+	display: inline;
+}
+.foods-2 .foods-info.full {
+	width: 528px;
+}
+.list-foods-2 li.foods-2 .tag-foods {
+	list-style: none;
+	margin: 0;
+}
+.list-foods-2 li.foods-2 .tag-foods li {
+	height:14px;
+	width:auto;
+	padding:0;
+	border:none;
+	float:left;
+	display:inline;
+	margin:0 5px 12px 0;
+	background:#b6d163;
+	font-size:11px;
+	color:#fff;
+	font-weight:bold;
+	text-transform:uppercase;
+	box-shadow:none;
+	line-height:0.9em;
+	padding:4px 5px 0 5px;
+}
+.list-foods-2 li.foods-2 p {
+	clear: both;
+	font-size: 14px;
+	font-family: 'Droid Serif', serif;
+	color: #1c1c1c;
+	margin: 0 0 15px 0;
+	line-height: 1.4em;
+}
+.foods-2 .foods-option {
+	width: 193px;
+	height: 97px;
+	position: absolute;
+	z-index: 30;
+	background: url(../images/rope-foods.png) no-repeat;
+	right: 22px;
+	top: 62px;
+	padding: 0 0 0 25px;
+}
+.foods-2 .foods-option h4 {
+	font-size: 11px;
+	color: #696969;
+	font-family: 'Droid Serif', serif;
+	font-weight: bold;
+	font-style: italic;
+	margin: 5px 0 7px 0;
+}
+.foods-2 .foods-option h5 {
+	height: 18px;
+	background: url(../images/sep-foods.png) repeat-x 0 9px;
+	line-height: 1.0em;
+	margin: 0 0 5px 0;
+}
+.foods-2 .foods-option h5 em {
+	float: left;
+	background: #fefdfa;
+	padding: 0 5px 0 0;
+	margin: 3px 0 0 0;
+	font-family: 'Droid Serif', serif;
+	color: #8a8a8a;
+	font-size: 11px;
+}
+.foods-2 .foods-option h5 span {
+	float: right;
+	background: #fefdfa;
+	padding: 0 0 0 5px;
+	margin: 3px 0 0 0;
+	font-family: 'Droid Serif', serif;
+	color: #8a8a8a;
+	font-size: 11px;
+	font-style: italic;
+	color: #555555;
+}
+.nav-chef {
+	margin: 0;
+	list-style: none;
+}
+.nav-chef li {
+	background:url(../images/sep-sidebar.png) repeat-x 0 100%;
+	padding:0 0 20px 0;
+	margin:0 0 15px 0;
+}
+.nav-chef img {
+	float: left;
+	padding: 6px;
+	box-shadow:0 1px 2px #b5a688;
+	background: #fff;
+}
+.nav-chef-content {
+	width: 128px;
+	float: right;
+}
+.nav-chef-content h4 {
+	font-size: 14px;
+	color: #51331a;
+	font-family: 'Droid Sans', serif;
+	margin: 6px 0 5px 0;
+}
+.nav-chef-content h5 {
+	font-size: 11px;
+	font-family: 'Droid Serif', serif;
+	color: #a68e7c;
+	font-style: italic;
+	margin: 0 0 9px 0;
+}
+.icon-twitter-chef, .icon-linkedin-chef, .icon-facebook-chef, .icon-gplus-chef {
+	width:16px;
+	height:16px;
+	float:left;
+	margin:0 5px 0 0;
+	display:inline;
+	text-indent:-9999px;
+	background:url(../images/icon-twitter-small.png) no-repeat;
+}
+.icon-linkedin-chef {
+	background:url(../images/icon-linkedin-small.png) no-repeat;
+}
+.icon-facebook-chef {
+	background:url(../images/icon-facebook-small.png) no-repeat;
+}
+.icon-gplus-chef {
+	background:url(../images/icon-gplus-small.png) no-repeat;
+}
+.icon-twitter-chef:hover, .icon-facebook-chef:hover, .icon-linkedin-chef:hover, .icon-gplus-chef:hover {
+	background-position:0 -16px;
+}
+.nav-gallery {
+	list-style:none;
+	margin:0;
+}
+.nav-gallery li {
+	width:57px;
+	height:57px;
+	float:left;
+	display:inline;
+	margin:0 18px 18px 0;
+}
+.nav-gallery li a {
+	width:57px;
+	height:57px;
+	float:left;
+	display:inline;
+}
+.nav-gallery li a img {
+	padding: 6px;
+	box-shadow:0 1px 2px #b5a688;
+	background:#fff;
+	-webkit-transition: all 0.3s ease-in-out 0.1s; 
+	-moz-transition: all 0.3s ease-in-out 0.1s;
+}
+.nav-gallery li a:hover img {
+	background:#692f06;
+	-webkit-transition: all 0.5s ease-in-out 0.1s; 
+	-moz-transition: all 0.5s ease-in-out 0.1s;
+}
+.nav-gallery li.last {
+	margin-right:0;
+}
+
+/* Chef
+=====================================================================*/
+#chef-image {
+	width:990px;
+	height:349px;
+	background:url(../images/big-frame.jpg) no-repeat;
+	margin:13px 0 25px 0;
+	position:relative;
+	padding:10px;
+}
+#chef-image h1 {
+	margin:auto;
+	padding:0;
+	position:absolute;
+	height:38px;
+	background:url(../images/title-chef.png) repeat-x;
+	text-align:right;
+	right:10px;
+	bottom:48px;
+	line-height:1.0em;
+	color:#fff;
+	font-size:24px;
+	padding:13px 15px 0 15px;
+}
+#text-chef {
+	text-align:center;
+	background:url(../images/sep-main-title-full.png) no-repeat 0 100%;
+	padding:0 70px 5px 70px;
+	margin:0 0 30px 0;
+}
+#text-chef p {
+	font-family:'Droid Serif', serif;
+}
+
+#list-chef {
+	list-style:none;
+	margin:0;
+}
+#list-chef li {
+	background:url(../images/separator.png) repeat-x 0 100%;
+	padding:0 0 30px 0;
+	margin:0 0 30px 0;
+}
+#list-chef li.last {
+	background:none;
+}
+.chef-photo {
+	width:223px;
+	float:left;
+	text-align:center;
+}
+.chef-photo img {
+	padding:8px;
+	background:#fff;
+	box-shadow:0 0 3px #d7d7d7;
+	margin:0 0 10px 0;
+}
+.chef-photo h2 {
+	font-size:14px;
+	font-family:'Droid Sans', serif;
+	font-weight:normal;
+}
+.chef-photo h2 span {
+	font-family:'Droid Serif', serif;
+	color:#808080;
+	font-style:italic;
+}
+.chef-profile {
+	width:757px;
+	float:right;
+}
+#main-content .static-page p.social-chef {
+	margin-top:8px;
+	font-size:12px;
+	color:#9c7554;
+	text-transform:uppercase;
+}
+#main-content .static-page p.social-chef a {
+	color:#9c7554;
+	text-decoration:none;
+}
+#main-content .static-page p.social-chef a:hover {
+	border-bottom:1px dotted #9c7554
+}
+
+/* Gallery
+=====================================================================*/
+#list-gallery {
+	width: 780px;
+	margin: -28px 0 0 -40px;
+	list-style: none;
+}
+#list-gallery li {
+	margin: 0;
+	width: 260px;
+	height: 211px;
+	float: left;
+	position: relative;
+}
+#list-gallery li.category {
+	background: url(../images/gallery-category.png) no-repeat;
+	text-align: right;
+}
+#list-gallery li.category h2 {
+	font-size: 20px;
+	color: #341d0a;
+	font-weight: normal;
+	font-family: 'Droid Sans', serif;
+	padding: 0 15px;
+	position:absolute;
+	bottom:20px;
+	right:20px;
+}
+#list-gallery li a {
+	width: 220px;
+	height: 211px;
+	float: left;
+	padding: 0 20px;
+	font-size: 13px;
+	font-family: 'Droid Sans', serif;
+	color: #462b15;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+.gallery-cover {
+	width: 260px;
+	height: 211px;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background: url(../images/gallery-cover.png) no-repeat;
+	display:none;
+}
+.gallery-cover span {
+	bottom:20px;
+	right:20px;
+	text-align:right;
+	position:absolute;
+	z-index:20;
+}
+
+/* Testimonial
+=====================================================================*/
+.testimonial-content {
+	width: 720px;
+	margin: 0 0 5px -20px;
+	background: url(../images/title-testimonial.png) no-repeat 0 14px;
+}
+.image-testimonial {
+	float: left;
+	padding:8px;
+	background:#fff;
+	box-shadow:0 0 3px #d7d7d7;
+	margin: 0 20px;
+}
+.testimonial-container {
+	width: 548px;
+	float: right;
+}
+#main-content .static-page.testimonial-content header {
+	margin: 14px 0 0 0;
+}
+#main-content .static-page.testimonial-content header h2 {
+	float: left;
+	font-size: 14px;
+	color: #41d0a;
+	margin: 0;
+	font-family: 'Droid Sans', serif;
+	line-height: 1.0em;
+	background: url(../images/quote-small.png) no-repeat 0 6px;
+	padding: 0 0 0 20px;
+}
+#main-content .static-page.testimonial-content header h2 strong {
+	float: left;
+	margin: 7px 6px 0 8px;
+}
+#main-content .static-page.testimonial-content header h2 em {
+	float: left;
+	margin: 8px 0 0 0;
+	font-family: 'Droid Serif', serif;
+	font-size: 12px;
+	color: #a28969;
+}
+#main-content .static-page.testimonial-content header h2 em a {
+	text-decoration: none;
+	border-bottom: 1px dotted #896d4a;
+	color: #896d4a;
+}
+#main-content .static-page.testimonial-content header .star {
+	float: right;
+	margin: 9px 10px 0 0;
+}
+#main-content .static-page.testimonial-content p {
+	font-family: 'Droid Serif', serif;
+	color: #272727;
+}
+
+/* Contact
+=====================================================================*/
+#maps-tabs {
+	position: relative;
+	background:url(../images/big-frame.jpg) no-repeat;
+	height: 445px;
+	margin: 15px 0 0 0;
+}
+#maps-tabs .ui-tabs-panel {
+	width:990px;
+	height:349px;
+}
+#maps-tabs .ui-tabs-panel iframe {
+	width: 738px;
+	height: 347px;
+	float: left;
+	border: 1px solid #ccbb9b;
+	margin: 10px 0 0 10px;
+}
+#nav-maps {
+	position: absolute;
+	width: 1010px;
+	left: 0;
+	top: 388px;
+	list-style: none;
+	margin: 0;
+	padding: 0 0 19px 0;
+	background: url(../images/sep-main-title-full.png) no-repeat 0 100%;
+	text-align: center;
+}
+#nav-maps li {
+	display: inline;
+	margin: 0 3px 10px 3px;
+}
+#nav-maps li a {
+	background: #b6d163;
+	white-space:nowrap;
+	padding: 7px 15px;
+	color: #4e4e4e;
+	font-size: 12px;
+	text-decoration: none;
+	text-shadow: 0 -1px #95ad4a;
+	border-radius: 5px;
+	line-height: 2.9em;
+	font-family: 'Droid Sans', serif;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: bold;
+}
+#nav-maps li a:hover, #nav-maps li.ui-tabs-selected a {
+	background: #9db948;
+}
+.ui-tabs .ui-tabs-hide {
+     display: none;
+}
+.address {
+	width: 200px;
+	float: right;
+	margin: 10px 10px 0 0;
+	display: inline;
+	padding: 20px 0 0 0;
+}
+.address h2 {
+	font-size: 16px;
+	color: #341d0a;
+	font-family: 'Droid Sans', serif;
+	line-height:1.375em;
+	margin-bottom:0.687em;
+}
+.address p {
+	font-size:14px;
+	color:#272727;
+	line-height:1.6em;
+	margin-top:1.6em;
+	margin-bottom:1.6em;
+	font-size: 14px;
+	font-family: 'Droid Serif', serif;
+	color: #51331a;
+}
+.address p.text-address {
+	background: url(../images/sep-sidebar.png) repeat-x 0 100%;
+	padding: 0 0 25px 0;
+}
+#form-contact #form-left {
+	width: 250px;
+	float: left;
+	display: inline;
+}
+#form-contact {
+	padding: 10px 0 40px 0;
+}
+#form-contact .input {
+	width: 230px;
+	height: 24px;
+	border: none;
+	background: #f1f1f1;
+	box-shadow: 0 -1px 1px #cacaca;
+	border-radius: 4px;
+	font-size: 12px;
+	color: #a4a4a4;
+	padding: 5px 10px;
+	margin: 8px 0 12px 0;
+}
+#form-contact label {
+	font-size: 12px;
+	color: #272727;
+}
+#form-contact #form-right {
+	width: 432px;
+	float: left;
+	margin: 0 0 0 18px;
+}
+#form-contact .input.textarea {
+	width: 412px;
+	height: 110px;
+}
+#form-contact .button {
+	width:131px;
+	height:40px;
+	background:url(../images/button-more-homepage.png) no-repeat;
+	text-align:center;
+	float:right;
+	font-size:12px;
+	color:#353535;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-weight:bold;
+	font-family:'Droid Sans', arial, serif;
+	text-shadow:0 1px #fff;
+	padding: 1px 0 0 0;
+	border: none;
+}
+#form-contact .button:hover {
+	background-position:0 -40px;
+	color:#fff;
+	text-shadow:0 1px 1px #87a038;
+}
+#main-content .static-page p#text-contact {
+	width: 292px;
+	float: right;
+	font-family: 'Droid Serif', serif;
+	color: #898989;
+	font-style: italic;
+	font-size: 12px;
+}
+.errordiv {
+	display:block;
+	border:1px solid #f2a9a9;
+	padding:5px;
+	color:#f00;
+	font-size:12px;
+	margin:8px 0 0 0;
+}
+.correctdiv {
+	display:block;
+	border:1px solid #b6e47a;
+	padding:5px;
+	color:#629c17;
+	font-size:12px;
+	margin:8px 0 0 0;
+	background:#d7fca8;
+}
+
+/* Typography
+=====================================================================*/
+table {
+	width: 90%;
+	margin: 0 0 30px 0;
+	border-left:1px solid #fff;
+}
+table thead th {
+	height: 40px;
+	background: url(../images/tblhead.png) repeat-x;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	font-size: 12px;
+	vertical-align:middle;
+	font-weight: bold;
+}
+table tbody td, table tfoot td {
+	height: 33px;
+	vertical-align: middle;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	color: #606060;
+	font-size: 11px;
+	text-align: center;
+}
+#main-content table tbody tr td img, #fullwidth table tbody tr td img {
+	margin: 0;
+}
+table tbody tr.odd td {
+	background: #efefef;
+}
+table tbody tr td.cellfeat, table tbody tr.odd td.cellfeat {
+	background: #eaeaea;
+	padding: 2px 0 2px 10px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #444;
+	text-align: left;
+}
+#main-content .colhalf {
+	width:330px;
+	float:left;
+	display:inline;
+	margin-right:40px;
+}
+#main-content .colhalf.lastcol, #content.full .colhalf.lastcol {
+	margin-right:0;
+}
+#content.full .colhalf {
+	width:485px;
+	float:left;
+	display:inline;
+	margin-right:40px;
+}
+#main-content .static-page blockquote, #content.full .static-page blockquote {
+	font-size:18px;
+	color:#373737;
+	font-family:'Droid Sans', serif;
+	border-top:1px solid #eaeaea;
+	border-bottom:1px solid #eaeaea;
+}
+#main-content .static-page blockquote p, #content.full .static-page blockquote p {
+	color:#373737;
+	font-size:18px;
+	line-height:1.222em;
+	margin-top:0.611em;
+	margin-bottom:0.611em;
+}
+
+/* Footer
+=====================================================================*/
+#footer {
+	width:1090px;
+	padding:30px 15px 40px 15px;
+	margin:0 auto;
+}
+.home #footer {
+	padding-top: 40px;
+}
+.box-footer {
+	width: 243px;
+	height: 137px;
+	float: left;
+	margin: 0 38px 0 0;
+	display: inline;
+	background: url(../images/box-footer.png) no-repeat;
+	padding: 25px;
+	position: relative;
+}
+.box-footer h4 {
+	font-size: 14px;
+	font-family: 'Droid Sans', arial, serif;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #9e8a76;
+	text-align: center;
+	background: url(../images/sep-box-footer.png) no-repeat;
+}
+.box-footer h4 span {
+	display: block;
+	background: url(../images/sep-box-footer.png) no-repeat 0 100%;
+	padding: 8px 0;
+}
+.box-footer p {
+	text-align: center;
+	font-size: 12px;
+	font-family: 'Droid Serif', Georgia, serif;
+	color: #8f7861;
+	line-height:1.7em;
+	margin-top:1.4em;
+	margin-bottom:1.4em;
+}
+.box-footer.daily h4 {
+	background: none;
+	font-size: 20px;
+	color: #8f7861;
+	font-family: 'Droid Serif', Georgia, serif;
+	font-weight: bold;
+}
+.box-footer.daily p {
+	font-size: 20px;
+	color: #8f7861;
+	margin-top: 0.6em;
+	margin-bottom: 0.8em;
+	line-height: 1.3em;
+}
+.button-contact, .button-contact:link, .button-contact:visited {
+	width: 178px;
+	height: 33px;
+	background: url(../images/button-contact.png) no-repeat;
+	position: absolute;
+	z-index: 10;
+	bottom: -10px;
+	left: 58px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px 2px #84a030;
+	padding: 10px 0 0 0;
+}
+.button-contact:hover {
+	background-position: 0 -43px;
+	color: #000;
+	text-shadow: 0 1px #fff;
+	text-decoration: none;
+}
+#nav-box-footer {
+	text-align: center;
+	background: url(../images/sep-box-footer.png) no-repeat;
+	margin: 0;
+	list-style: none;
+	padding: 18px 0 0 0;
+}
+#nav-box-footer li {
+	display: inline;
+	background: url(../images/sep-nav-box-footer.png) no-repeat 100% 6px;
+	padding: 0 8px 0 2px;
+}
+#nav-box-footer li a {
+	font-size: 12px;
+	color: #62472b;
+	font-family: 'Droid Serif', Georgia, serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+#nav-box-footer li.last {
+	background: none;
+	padding-right: none;
+}
+#nav-box-footer li a:hover {
+	border-bottom: 1px dotted #62472b;
+}
+#footer-copyright {
+	width:420px;
+	float:right;
+	margin: -2px 5px 0 0;
+	display: inline;
+}
+#list-social {
+	height:32px;
+	list-style:none;
+	margin:0 0 15px 0;
+	float: right;
+}
+#list-social li {
+	width:32px;
+	height:32px;
+	float:left;
+	display:inline;
+	margin:0 8px 0 0;
+}
+#list-social li a {
+	width:32px;
+	height:32px;
+	float:left;
+	display:inline;
+	text-indent:-9999px;
+}
+#icon-facebook {
+	background:url(../images/icon-facebook.png) no-repeat;
+}
+#icon-twitter {
+	background:url(../images/icon-twitter.png) no-repeat;
+}
+#icon-linkedin {
+	background:url(../images/icon-linkedin.png) no-repeat;
+}
+#icon-gplus {
+	background:url(../images/icon-gplus.png) no-repeat;
+}
+#icon-yelp {
+	background:url(../images/icon-yelp.png) no-repeat;
+}
+#list-social li a:hover {
+	background-position:0 -32px;
+}
+#footer-copyright h5 {
+	float:left;
+	font-size:12px;
+	font-weight:normal;
+	color:#8f7861;
+	font-family:'Droid Serif', arial, serif;
+	padding:0 10px 0 0;
+	clear: both;
+}
+#nav-footer {
+	height:18px;
+	list-style:none;
+	margin:0 0 17px 0;
+	clear: both;
+	float: right;
+}
+#nav-footer li {
+	height:18px;
+	float:left;
+	background:url(../images/sep-footer.png) no-repeat 0 1px;
+	font-family:'Droid Serif', arial, serif;
+	padding:0 10px;
+	color:#8f7861;
+}
+#nav-footer li.first {
+	background: none;
+}
+#nav-footer li a {
+	color:#4d3013;
+	text-decoration:none;
+}
+#nav-footer li a:hover {
+	text-decoration:underline;
+}
+#footer-copyright p {
+	font-size:11px;
+	color:#8f7861;
+	font-family:'Droid Serif', arial, serif;
+	font-style:italic;
+	line-height:1.7em;
+	clear: both;
+	text-align: right;
+	padding: 0 7px 0 0;
+	margin: 0 0 18px 0;
+}
+#footer-copyright img {
+	float: right;
+	margin: 0 7px 0 0;	
+}

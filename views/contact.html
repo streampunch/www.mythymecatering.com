@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Foodilicious Restaurant Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+	<meta name="description" content="Website Description" />
+	<meta name="keywords" content="Website Keywords" />
+	<link rel="stylesheet" type="text/css" media="all" href="style/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="style/prettyPhoto.css" />
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" media="all" href="style/stylemobile.css" />
+	
+	<!--[if IE 7]>
+			<style type="text/css">@import "style/ie7.css";</style>
+	<![endif]-->
+	<!--[if IE 8]>
+			<style type="text/css">@import "style/ie8.css";</style>
+	<![endif]-->
+	<script src="script/modernizr.js" type="text/javascript"></script>
+	<script src="script/jquery.js" type="text/javascript"></script>
+	<script src="script/jquery-ui.js" type="text/javascript"></script>
+	<script src="script/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script src="script/jquery.cycle.js" type="text/javascript"></script>
+	<script src="script/twitter.js" type="text/javascript"></script>
+	<script src="script/gettwitter.js" type="text/javascript"></script>
+	<script src="script/jquery.retina.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function (){
+		$("a[data-rel^='prettyPhoto']").prettyPhoto({
+			default_width: 600,
+			default_height: 420
+		});
+		$('a[data-rel]').each(function() {
+			$(this).attr('rel', $(this).data('rel'));
+		});
+		$('#maps-tabs').tabs({ fx: { opacity: 'toggle' } });
+		$('#logo img[data-retina]').retina({checkIfImageExists: true});
+	});
+	</script>
+</head>
+<body>
+	<div id="slideshow">
+		<div class="panel-slide" id="slide-1">
+		</div>
+	</div>
+	<div id="shadow"></div>
+	<div id="container">
+		<header id="banner" class="clearfix">
+			<a href="index.html" id="logo"><img src="images/logo.png" alt="Foodilicious - Best Sushi Ever" data-retina="images/logo-retina.png" /></a>
+			<nav id="nav" class="clearfix">
+				<ul id="nav-main">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Our Foods</a>
+						<ul>
+							<li><a href="foods-1.html">Beverages (Style 1)</a></li>
+							<li><a href="foods-2.html">Appetizer (Style 2)</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Layout</a>
+						<ul>
+							<li><a href="#">Color Variation</a>
+								<ul>
+									<li><a href="../light/index.html">Light</a></li>
+									<li><a href="../dark/index.html">Dark</a></li>
+								</ul>
+							</li>
+							<li><a href="aboutus.html">About Us</a></li>
+							<li><a href="fullwidth.html">Full Width Layout</a></li>
+							<li><a href="gallery.html">Gallery</a></li>
+							<li><a href="typography.html">Typography</a></li>
+						</ul>
+					</li>
+					<li><a href="newslist.html">Blog</a></li>
+					<li><a href="chef.html">Chef</a></li>
+					<li><a href="testimonial.html">Testimonial</a></li>
+					<li class="current-menu-item"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="content" class="full">
+			<div id="content-top"></div>
+			<div id="content-back" class="clearfix">
+				<div id="main-content">
+					<div id="maps-tabs" class="clearfix">
+						<ul id="nav-maps">
+							<li><a href="#tabs-1">Main Restaurant</a></li>
+							<li><a href="#tabs-2">Las Vegas Branch</a></li>
+							<li><a href="#tabs-3">Singapore</a></li>
+						</ul>
+						<div class="ui-tabs-panel" id="tabs-1">
+							<iframe src="http://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=yogyakarta&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=61.799062,95.888672&amp;ie=UTF8&amp;hq=&amp;hnear=Yogyakarta,+Special+District+of+Yogyakarta,+Indonesia&amp;ll=-7.797224,110.368797&amp;spn=0.019218,0.02341&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+							<div class="address">
+								<h2>Main Restaurant</h2>
+								<p class="text-address">108 Avenue<br /> Jean Baptiste Clément, 92100 
+								Boulogne-Billancourt<br /> France</p>
+								<p class="text-phone"><strong>Phone:</strong> +62 4343556<br />
+								<strong>Fax:</strong> +63 483 4838</p>
+							</div>
+						</div>
+						<div class="ui-tabs-panel" id="tabs-2">
+							<iframe src="http://www.google.com/maps?hl=en&amp;sig=pug&amp;ie=UTF8&amp;q=las+vegas+restaurant&amp;fb=1&amp;gl=id&amp;cid=0,0,3282036688729522812&amp;t=m&amp;iwloc=A&amp;ll=36.107666,-115.151348&amp;spn=0.006295,0.006295&amp;output=embed"></iframe>
+							<div class="address">
+								<h2>Las Vegas Branch</h2>
+								<p class="text-address">4510 Paradise Road<br />
+								Las Vegas, NV 89169,<br /> United States</p>
+								<p class="text-phone"><strong>Phone:</strong> +62 4343556<br />
+								<strong>Fax:</strong> +63 483 4838</p>
+							</div>
+						</div>
+						<div class="ui-tabs-panel" id="tabs-3">
+							<iframe src="http://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=163+Ang+Mo+Kio+Avenue+4,+Singapore+560163&amp;aq=&amp;sll=1.347246,103.836976&amp;sspn=0.310278,0.374565&amp;gl=id&amp;ie=UTF8&amp;hq=&amp;hnear=163+Ang+Mo+Kio+Avenue+4,+Singapore+560163&amp;t=m&amp;z=14&amp;ll=1.373996,103.837743&amp;output=embed"></iframe>
+							<div class="address">
+								<h2>Singapore</h2>
+								<p class="text-address">163 Ang Mo Kio Avenue 4
+								Singapore</p>
+								<p class="text-phone"><strong>Phone:</strong> +62 4343556<br />
+								<strong>Fax:</strong> +63 483 4838</p>
+							</div>
+						</div>
+					</div>
+					<article class="static-page">
+						<h3>Contact Us</h3>
+						<!-- error message
+						<div class="errordiv">
+							Please type your email address!!
+						</div>
+						-->
+						<!-- correct message
+						<div class="correctdiv">
+							Thanks, we will reply your message immediately.
+						</div>
+						-->
+						<form method="post" action="#" id="form-contact" class="clearfix">
+							<div id="form-left">
+								<label for="text-name">Name (required)</label><br />
+								<input type="text" name="name" class="input" id="text-name" /><br />
+								<label for="text-email">Email (required, will not published)</label><br />
+								<input type="text" name="email" class="input" id="text-email" /><br />
+								<label for="text-phone">Phone (optional)</label><br />
+								<input type="text" name="phone" class="input" id="text-phone" /><br />
+							</div>
+							<div id="form-right">
+								<label for="text-comment">Comment <span>(required)</span></label><br />
+								<textarea cols="10" rows="20" class="input textarea" id="text-comment"></textarea><br />
+								<input type="submit" name="submit-comment" class="button" value="Sent" />
+							</div>
+							<p id="text-contact">
+							We will reply your question immediately. You can also make a booking use this contact form, don’t forget to write your phone number so we can call you back.</p>
+						</form>
+					</article>
+				</div>
+			</div>
+			<div id="content-bottom"></div>
+		</div>
+		<footer id="footer" class="clearfix">
+			<aside class="box-footer">
+				<h4><span>Food Lovers Restaurant</span></h4>
+				<p>1823 4th Street Barkeley, CA 94710 USA<br />
+				<strong>Phone:</strong> +62 743 4738 <strong>Fax:</strong> +62 843 8492<br />
+				<strong>Email:</strong> hello@sushirestaurant.com</p>
+				<a href="contact.html" class="button-contact">Contact Us</a>
+			</aside>
+			<aside class="box-footer daily">
+				<h4>Open Daily</h4>
+				<p>Mon-Fri: 10am - 10pm<br />
+				Sat-Sun: 09am - 11pm</p>
+				<ul id="nav-box-footer">
+					<li><a href="#">Foods</a></li>
+					<li><a href="#">Chef</a></li>
+					<li><a href="#">Blog</a></li>
+					<li class="last"><a href="#">Location</a></li>
+				</ul>
+			</aside>
+			<aside id="footer-copyright">
+				<ul id="list-social">
+					<li><a href="#" id="icon-facebook">Facebook</a></li>
+					<li><a href="#" id="icon-twitter">Twitter</a></li>
+					<li><a href="#" id="icon-linkedin">Linkedin</a></li>
+					<li><a href="#" id="icon-gplus">Google Plus</a></li>
+					<li><a href="#" id="icon-yelp">Yelp</a></li>
+				</ul>
+				<p>You can use this area to put some text, any text you want will fit in this area. Maybe some <strong>address</strong> or branch or privacy policy or anything. Or some welcome message or maybe promotion text.</p>
+				<ul id="nav-footer" class="clearfix">
+					<li class="first">Copyright &copy; 2012, Food Lovers</li>
+					<li>by <a href="#">plentong</a></li>
+					<li>Photo by <a href="#">Photoklik</a></li>
+				</ul>
+			</aside>
+		</footer>
+	</div>
+</body>
+</html>

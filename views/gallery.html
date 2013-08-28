@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Foodilicious Restaurant Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+	<meta name="description" content="Website Description" />
+	<meta name="keywords" content="Website Keywords" />
+	<link rel="stylesheet" type="text/css" media="all" href="style/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="style/prettyPhoto.css" />
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" media="all" href="style/stylemobile.css" />
+	
+	<!--[if IE 7]>
+			<style type="text/css">@import "style/ie7.css";</style>
+	<![endif]-->
+	<!--[if IE 8]>
+			<style type="text/css">@import "style/ie8.css";</style>
+	<![endif]-->
+	<script src="script/modernizr.js" type="text/javascript"></script>
+	<script src="script/jquery.js" type="text/javascript"></script>
+	<script src="script/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script src="script/jquery.cycle.js" type="text/javascript"></script>
+	<script src="script/twitter.js" type="text/javascript"></script>
+	<script src="script/gettwitter.js" type="text/javascript"></script>
+	<script src="script/jquery.retina.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function (){
+		$("#list-gallery li").hover(function() {
+			$(this).children(".gallery-cover").fadeTo(500, 1);
+				}, function() {
+			$(this).children(".gallery-cover").fadeTo(500, 0);
+		});
+		$("a[rel^='prettyPhoto']").prettyPhoto({
+			default_width: 600,
+			default_height: 420,
+			theme: 'light_rounded',
+			social_tools: false
+		});
+		$('#logo img[data-retina]').retina({checkIfImageExists: true});
+	});
+	</script>
+</head>
+<body>
+	<div id="slideshow">
+		<div class="panel-slide" id="slide-1">
+		</div>
+	</div>
+	<div id="shadow"></div>
+	<div id="container">
+		<header id="banner" class="clearfix">
+			<a href="index.html" id="logo"><img src="images/logo.png" alt="Foodilicious - Best Sushi Ever" data-retina="images/logo-retina.png" /></a>
+			<nav id="nav" class="clearfix">
+				<ul id="nav-main">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Our Foods</a>
+						<ul>
+							<li><a href="foods-1.html">Beverages (Style 1)</a></li>
+							<li><a href="foods-2.html">Appetizer (Style 2)</a></li>
+						</ul>
+					</li>
+					<li class="current-menu-item"><a href="#">Layout</a>
+						<ul>
+							<li><a href="#">Color Variation</a>
+								<ul>
+									<li><a href="../green/index.html">Light</a></li>
+									<li><a href="../dark/index.html">Dark</a></li>
+								</ul>
+							</li>
+							<li><a href="aboutus.html">About Us</a></li>
+							<li><a href="fullwidth.html">Full Width Layout</a></li>
+							<li><a href="gallery.html">Gallery</a></li>
+							<li><a href="typography.html">Typography</a></li>
+						</ul>
+					</li>
+					<li><a href="newslist.html">Blog</a></li>
+					<li><a href="chef.html">Chef</a></li>
+					<li><a href="testimonial.html">Testimonial</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="content">
+			<div id="content-top"></div>
+			<div id="content-back" class="clearfix">
+				<div id="main-content">
+					<ul id="list-gallery" class="clearfix">
+						<li class="category"><h2>New Year Party</h2></li>
+						<li><img src="images/gal-1.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="John Doe puke in toilet" rel="prettyPhoto[gal-1]"><span>John Doe puke in toilet</span></a></div>
+						</li>
+						<li><img src="images/gal-2.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Group of people eat 100 Bigmac in 10 minutes" rel="prettyPhoto[gal-1]"><span>Group of people eat 100 Bigmac in 10 minutes</span></a></div>
+						</li>
+						<li><img src="images/gal-3.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Lorem ipsum dolor sit amet" rel="prettyPhoto[gal-1]"><span>Lorem ipsum dolor sit amet</span></a></div>
+						</li>
+						<li><img src="images/gal-4.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Pallentesque" rel="prettyPhoto[gal-1]"><span>Pallentesque</span></a></div>
+						</li>
+						<li><img src="images/gal-5.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Lorem ipsum dolor sit amet" rel="prettyPhoto[gal-1]"><span>Lorem ipsum dolor sit amet</span></a></div>
+						</li>
+						<li><img src="images/gal-6.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="John Doe puke in toilet" rel="prettyPhoto[gal-1]"><span>Pallentesque</span></a></div>
+						</li>
+						<li class="category"><h2>Christmas Free Vodka December 2012</h2></li>
+						<li><img src="images/gal-1.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="John Doe puke in toilet" rel="prettyPhoto[gal-2]"><span>John Doe puke in toilet</span></a></div>
+						</li>
+						<li><img src="images/gal-2.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Group of people eat 100 Bigmac in 10 minutes" rel="prettyPhoto[gal-2]"><span>Group of people eat 100 Bigmac in 10 minutes</span></a></div>
+						</li>
+						<li><img src="images/gal-3.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Lorem ipsum dolor sit amet" rel="prettyPhoto[gal-2]"><span>Lorem ipsum dolor sit amet</span></a></div>
+						</li>
+						<li><img src="images/gal-4.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Pallentesque" rel="prettyPhoto[gal-2]"><span>Pallentesque</span></a></div>
+						</li>
+						<li class="category"><h2>John Doe Birthday Party</h2></li>
+						<li><img src="images/gal-1.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="John Doe puke in toilet" rel="prettyPhoto[gal-2]"><span>John Doe puke in toilet</span></a></div>
+						</li>
+						<li><img src="images/gal-2.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Group of people eat 100 Bigmac in 10 minutes" rel="prettyPhoto[gal-2]"><span>Group of people eat 100 Bigmac in 10 minutes</span></a></div>
+						</li>
+						<li><img src="images/gal-3.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Lorem ipsum dolor sit amet" rel="prettyPhoto[gal-2]"><span>Lorem ipsum dolor sit amet</span></a></div>
+						</li>
+						<li><img src="images/gal-4.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Pallentesque" rel="prettyPhoto[gal-2]"><span>Pallentesque</span></a></div>
+						</li>
+						<li><img src="images/gal-5.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Lorem ipsum dolor sit amet" rel="prettyPhoto[gal-2]"><span>Lorem ipsum dolor sit amet</span></a></div>
+						</li>
+						<li><img src="images/gal-6.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="John Doe puke in toilet" rel="prettyPhoto[gal-2]"><span>Pallentesque</span></a></div>
+						</li>
+						<li class="category"><h2>Christmas Free Vodka December 2012</h2></li>
+						<li><img src="images/gal-1.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="John Doe puke in toilet" rel="prettyPhoto[gal-2]"><span>John Doe puke in toilet</span></a></div>
+						</li>
+						<li><img src="images/gal-2.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Group of people eat 100 Bigmac in 10 minutes" rel="prettyPhoto[gal-2]"><span>Group of people eat 100 Bigmac in 10 minutes</span></a></div>
+						</li>
+						<li><img src="images/gal-3.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Lorem ipsum dolor sit amet" rel="prettyPhoto[gal-2]"><span>Lorem ipsum dolor sit amet</span></a></div>
+						</li>
+						<li><img src="images/gal-4.jpg" alt="John Doe puke in toilet" />
+							<div class="gallery-cover"><a href="images/img-7.jpg" title="Pallentesque" rel="prettyPhoto[gal-2]"><span>Pallentesque</span></a></div>
+						</li>
+					</ul>
+				</div>
+				<div id="sidebar">
+					<aside class="widget-container">
+						<div class="widget-wrapper clearfix">
+							<h3 class="widget-title">Our Company</h3>
+							<article class="text-widget">
+								<img src="images/img-4.jpg" alt="Our Company" class="imgframe" />
+								<p><strong>Foodilicious Sushi Restaurant</strong> is the best Sushi restaurant in Bali, which you can found amazing Sushi Food from around the world.</p> 
+								<p>Founded on 1878 by Chef Ketut Putu and already available in 10 country and one planet.</p>
+								<div class="separator"></div>
+								<a href="#" class="button-more">More Info</a>
+							</article>
+						</div>
+					</aside>
+					<aside class="widget-container">
+						<div class="widget-wrapper clearfix">
+							<h3 class="widget-title">More Info About...</h3>
+							<ul class="menu">
+								<li><a href="#">Restaurant History</a></li>
+								<li><a href="#">Our Foods</a></li>
+								<li><a href="#">Our Chef</a></li>
+								<li><a href="#">Restaurant Location</a></li>
+								<li><a href="#">Reservation</a></li>
+							</ul>
+						</div>
+					</aside>
+					<aside class="widget-container">
+						<div class="widget-wrapper clearfix">
+							<h3 class="widget-title">Testimonial</h3>
+							<article class="text-widget">
+								<img src="images/avatar-1.jpg" alt="Our Company" class="testimonial" />
+								<div class="testimonial-header">
+									<h4>Johny Doe</h4>
+									<h5>Envato Inc.</h5>
+									<span class="star rate45">Rate: 4.5</span>
+								</div>
+								<blockquote><p>“Mauris nunc magna, cursus eget malesuada vitae, pellentesque non est. Nunc vitae eros diam. Proin ullamcorper viverra posuere”</p></blockquote>
+								<div class="separator"></div>
+								<a href="#" class="button-more">View All</a>
+							</article>
+						</div>
+					</aside>
+					<aside class="widget-container">
+						<div class="widget-wrapper clearfix">
+							<h3 class="widget-title">Open Daily</h3>
+							<ul class="nav-schedule">
+								<li><strong>Mon-Fri:</strong> <span>10am - 10pm</span></li>
+								<li><strong>Sat:</strong> <span>9am - 11pm</span></li>
+								<li><strong>Sun:</strong> <span>11am - 3pm</span></li>
+								<li><strong>National Holiday:</strong> <span>Closed</span></li>
+							</ul>
+						</div>
+					</aside>
+				</div>
+			</div>
+			<div id="content-bottom"></div>
+		</div>
+		<footer id="footer" class="clearfix">
+			<aside class="box-footer">
+				<h4><span>Food Lovers Restaurant</span></h4>
+				<p>1823 4th Street Barkeley, CA 94710 USA<br />
+				<strong>Phone:</strong> +62 743 4738 <strong>Fax:</strong> +62 843 8492<br />
+				<strong>Email:</strong> hello@sushirestaurant.com</p>
+				<a href="contact.html" class="button-contact">Contact Us</a>
+			</aside>
+			<aside class="box-footer daily">
+				<h4>Open Daily</h4>
+				<p>Mon-Fri: 10am - 10pm<br />
+				Sat-Sun: 09am - 11pm</p>
+				<ul id="nav-box-footer">
+					<li><a href="#">Foods</a></li>
+					<li><a href="#">Chef</a></li>
+					<li><a href="#">Blog</a></li>
+					<li class="last"><a href="#">Location</a></li>
+				</ul>
+			</aside>
+			<aside id="footer-copyright">
+				<ul id="list-social">
+					<li><a href="#" id="icon-facebook">Facebook</a></li>
+					<li><a href="#" id="icon-twitter">Twitter</a></li>
+					<li><a href="#" id="icon-linkedin">Linkedin</a></li>
+					<li><a href="#" id="icon-gplus">Google Plus</a></li>
+					<li><a href="#" id="icon-yelp">Yelp</a></li>
+				</ul>
+				<p>You can use this area to put some text, any text you want will fit in this area. Maybe some <strong>address</strong> or branch or privacy policy or anything. Or some welcome message or maybe promotion text.</p>
+				<ul id="nav-footer" class="clearfix">
+					<li class="first">Copyright &copy; 2012, Food Lovers</li>
+					<li>by <a href="#">plentong</a></li>
+					<li>Photo by <a href="#">Photoklik</a></li>
+				</ul>
+			</aside>
+		</footer>
+	</div>
+</body>
+</html>
